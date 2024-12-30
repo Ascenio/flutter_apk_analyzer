@@ -9,7 +9,7 @@ done
 
 for package in "$@"; do
 	{
-		while [[ -z "adb shell pm path $package" ]]; do
+		while [[ -z "$(adb shell pm path $package)" ]]; do
 			:
 		done
 		echo "Downloaded $package"
